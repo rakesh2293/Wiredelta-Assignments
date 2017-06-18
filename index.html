@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STATIC PAGE</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <!-- main body section-->
+    <div class="section">
+        <div class="heading">
+            <!-- header-->
+            <h1 class="h1">WIREDELTA</h2>
+		</div>
+		<div class="navbar">
+
+	<!-- navbar open-->
+
+		<ul class="ul1" >
+			<li class="li1" ><a class="a" >TASKS</a></li>
+		</ul>
+		<ul class="ul" >
+			<li class="li"><a  href="#calculateage">CALCULATEAGE</a></li>
+			<li  class="li"><a href="#geometric">GEOMETRIC</a></li>
+			<li  class="li"><a href="#calculator">CALCULATOR</a></li>
+			<li  class="li"><a href="#temperature">TEMPERATURE</a></li>
+		</ul>
+	<div style="clear:both;"></div>
+	</div><!-- navbar close-->
+
+	<div class="calculateage" id="calculateage"> <!-- calculate age section open-->
+		<h4 class="h4">THE AGE CALCULATOR</h4> <!-- calculate age heading-->
+		<div class="csection1" > <!-- calculate age csection1 open-->
+			<h3 class="h3condition">CONDITIONS:</h3>
+			<ul>
+				<li class="cli">Write a function named calculateAge() that:</li><br/>
+				<li class="cli">takes 2 arguments: birth year, current year.</li><br/>
+				<li class="cli">calculates the 2 possible ages based on those years.</li><br/>
+				<li class="cli">outputs the result to the screen like so: "You are either NN or NN"</li><br/>
+				<li class="cli">Call the function three times with different sets of values.</li><br/>
+				<li class="cli">Bonus: Figure out how to get the current year in JavaScript instead of passing it in.</li>
+			</ul>
+		</div> <!-- calculate age csection1 close-->
+		<div class="csection2"> <!-- calculate age csection2 open-->
+			<h3 class="h3condition">SOLUTION:</h3>
+			<table>
+				<tr>
+					<td><label>Birth Year:</label></td>
+					<td><input type="text" name="birthDate" id="birthDate" class="birthDate"></td>
+				</tr>
+				<tr>
+					<td><label>Current Year:</label></td>
+					<td><input type="text" name="currentdate" id="currentdate" class="currentdate"></td>
+				</tr>
+				<tr>
+					<td><label>Current age:</label></td>
+					<td><input type="text" name="" id="agec"></td>
+					<td><label>or</label></td>
+					<td><input type="text" name="" id="age1"></td>
+				</tr>
+				<tr>
+					<td><input type="submit"  class="submit" onclick="submitCalculateage()"></td>
+				</tr>
+			</table>
+		</div> <!-- calculate age csection2 close-->
+		<div style="clear:both;"></div>
+	</div> <!-- calculate age section close-->
+	
+	<div class="geometric" id="geometric"><!-- GEOMETRIC section open-->
+		<h4 class="ch4" style="">THE CIRCLE PROPERTIES</h4><!-- circle heading-->
+		<div class="csection1" ><!-- circle csection1 open-->
+			<h3 class="h3condition">CONDITIONS:</h3>
+			<ul>
+				<li class="cli">Create 2 functions that calculate properties of a circle.</li><br/>
+				<li class="cli">Create a function called calcCircumfrence():</li><br/>
+				<li class="cli">Pass the radius to the function.</li><br/>
+				<li class="cli">Calculate the circumference based on the radius, and output "The circumference is NN".</li><br/>
+				<li class="cli">Create a function called calcArea():</li><br/>
+				<li class="cli">Pass the radius to the function.</li>
+				<li class="cli">Calculate the area based on the radius, and output "The area is NN".</li>
+			</ul>
+		</div><!-- circle csection1 close-->
+		<div class="csection2"><!-- circle csection2 open-->
+			<h3 class="h3condition">SOLUTION:</h3>
+			<table>
+				<tr>
+					<td><label>Radius of circle</label></td><td><input type="text" name="radius" id="radius" class="radius"></td>
+				</tr>
+				<tr>	
+					<td><label>Circumfrence of circle is:</label></td><td><input type="text" id="circumfrence"> </td>
+				</tr>
+				<tr>
+					<td><label>Area of Circle is</label></td><td><input type="text" id="area"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="" class="submit" onclick="submitGemotric()"></td>
+				</tr>
+				</table>
+
+		</div> 
+		<!-- circle csection2 close-->
+	</div><!-- GEOMETRIC section close-->
+	<div class="calculator" id="calculator"><!-- calculor  section open-->
+		<h4 class="ch4" >BASIC CALCULATOR</h4><!-- calculor  heading-->
+		<div class="csection1"><!-- calculator csection1 open-->
+			<h3 class="h3condition">CONDITIONS:</h3>
+			<ul>
+				<li class="cli">Ever wonder how much a "lifetime supply" of your favorite snack is? Wonder no more!</li><br/>
+				<li class="cli">Write a function named calculateSupply() that:</li><br/>
+				<li class="cli">takes 2 arguments: age, amount per day.</li><br/>
+				<li class="cli">calculates the amount consumed for rest of the life (based on a constant max age).</li><br/>
+				<li class="cli">outputs the result to the screen like so: "You will need NN to last you until the ripe old age of X"</li><br/>
+				<li class="cli">Call that function three times, passing in different values each time.</li>
+				<li class="cli">Bonus: Accept floating point values for amount per day, and round the result to a round number.</li>
+			</ul>
+		</div>
+		<div class="csection2"><!-- calculator csection2 open-->
+			<h3 class="h3condition">SOLUTION:</h3>
+			<table>
+				<tr>
+					<td> Age</td>
+					<td><input type="text" name="age" id="age" class="age"></td>
+				</tr>
+				<tr>
+					<td>Amount Per Day</td>
+					<td><input type="text" name="amount" id="amount" class="amount"></td>
+				</tr>
+				<tr>
+					<td>Output</td>
+					<td><input type="text" name="" id="output"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="" class="submit"  onclick="submitCalculator()"></td>
+				</tr>
+			</table>
+		</div> <!-- calculator csection2 close-->
+	</div><!-- calculor  section close-->
+	<div class="temperature" id="temperature"><!-- temperature  section open-->
+		<h4 class="ch4t">THE TEMPERATURE CONVERT</h4><!-- temperature  heading-->
+		<div class="csection1"><!-- temeparature csection1 open-->
+			<h3 class="h3condition">CONDITIONS:</h3>
+			<ul>
+				<li class="cli">Create a function called celsiusToFahrenheit()</li><br/>
+				<li class="cli">Store a celsius temperature into a variable..</li><br/>
+				<li class="cli">Convert it to fahrenheit and output "NN°C is NN°F".</li><br/>
+				<li class="cli">Create a function called fahrenheitToCelsius():</li><br/>
+				<li class="cli">Now store a fahrenheit temperature into a variable.</li><br/>
+				
+				<li class="cli">Convert it to celsius and output "NN°F is NN°C."</li>
+			</ul>
+		</div>
+		<div class="csection2" style="width:40%;float:left;"><!-- temeparature csection2 open-->
+			<h3 class="h3condition">SOLUTION:</h3>
+			<table>
+				<tr>
+					<td><label> Fahrenheit value</label></td>
+					<td><input type="text" name="fahre" id="fahre" class="fahre"></td>
+					<td><input type="text" id="fouput"></td>
+					<td><input type="submit" name="" class="submit" onclick="submitTemperaturef()"></td>
+				</tr>
+				<tr>	
+					<td><label>Celsius value</label></td>
+					<td><input type="text" id="cels"> </td>
+					<td><input type="text" id="coutput"></td>
+					<td><input type="submit" name="" class="submit" onclick="submitTemperaturec()"></td>
+				</tr>
+				
+			</table>
+		</div> <!-- temeparature csection2 close-->
+	</div><!-- temeparature  section close-->
+	<div class="fotter">
+		
+	</div>
+</div>
+ <script type="text/JavaScript" src="./js/script.js"></script>
+</body>
+</html>
