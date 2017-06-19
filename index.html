@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>STATIC PAGE</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
+
 <body>
     <!-- main body section-->
     <div class="section">
@@ -27,8 +29,8 @@
 	<div style="clear:both;"></div>
 	</div><!-- navbar close-->
 
-	<div class="calculateage" id="calculateage"> <!-- calculate age section open-->
-		<h4 class="h4">THE AGE CALCULATOR</h4> <!-- calculate age heading-->
+	<div class="calculateage" id="calculateage"> <!-- calculator section open-->
+		<h4 class="h4" id="h4age">THE AGE CALCULATOR</h4> <!-- calculate age heading-->
 		<div class="csection1" > <!-- calculate age csection1 open-->
 			<h3 class="h3condition">CONDITIONS:</h3>
 			<ul>
@@ -52,16 +54,40 @@
 					<td><input type="text" name="currentdate" id="currentdate" class="currentdate"></td>
 				</tr>
 				<tr>
-					<td><label>Current age:</label></td>
-					<td><input type="text" name="" id="agec"></td>
+					<td><label>You are either:</label></td>
+					<td><p name="" id="agec"></p></td>
+				</tr>
+				<tr>
 					<td><label>or</label></td>
-					<td><input type="text" name="" id="age1"></td>
+					<td><p t name="" id="age1"></p></td>
 				</tr>
 				<tr>
 					<td><input type="submit"  class="submit" onclick="submitCalculateage()"></td>
 				</tr>
 			</table>
 		</div> <!-- calculate age csection2 close-->
+		<div class="csection3"> <!-- calculate age csection3 open-->
+			<h3 class="h3condition">OUTPUT:</h3>
+			<ul class="ulcsection3">
+				<li class="licsection3">1.Birth year:<span>1993</span></li>
+				<li class="licsection3">2.Current year:<span>2017</span></li>
+				<li class="licsection3">3.You are either:<span>23 </span>OR <span>24</span></li>
+			</ul>
+			<ul class="ulcsection3">
+				
+				<li class="licsection3">1.Birth year:<span>1998</span></li>
+				<li class="licsection3">2.Current year:<span>2011</span></li>
+				<li class="licsection3">3.You are either:<span>12 </span>OR <span>13</span></li>
+				
+			</ul>
+			<ul class="ulcsection3">
+				<li class="licsection3">1.Birth year:<span>2000</span></li>
+				<li class="licsection3">2.Current year:<span>2017</span></li>
+				<li class="licsection3">3.You are either:<span>6 </span>OR <span> 17</span></li>
+				
+
+			</ul>
+		</div> <!-- calculate age csection3 close-->
 		<div style="clear:both;"></div>
 	</div> <!-- calculate age section close-->
 	
@@ -86,10 +112,10 @@
 					<td><label>Radius of circle</label></td><td><input type="text" name="radius" id="radius" class="radius"></td>
 				</tr>
 				<tr>	
-					<td><label>Circumfrence of circle is:</label></td><td><input type="text" id="circumfrence"> </td>
+					<td><label>The circumference is:</label></td><td><p id="circumfrence"></p> </td>
 				</tr>
 				<tr>
-					<td><label>Area of Circle is</label></td><td><input type="text" id="area"></td>
+					<td><label>The area is:</label></td><td><p id="area"></p></td>
 				</tr>
 				<tr>
 					<td><input type="submit" name="" class="submit" onclick="submitGemotric()"></td>
@@ -125,14 +151,34 @@
 					<td><input type="text" name="amount" id="amount" class="amount"></td>
 				</tr>
 				<tr>
-					<td>Output</td>
-					<td><input type="text" name="" id="output"></td>
+					<td><p>You will need</p></td><td><p  id="output"/></p></td>
+				</tr>
+				<tr>
+					<td><p>to last you until the ripe old age of</p></td><td><p  id="output1"/></p></td>
 				</tr>
 				<tr>
 					<td><input type="submit" name="" class="submit"  onclick="submitCalculator()"></td>
 				</tr>
 			</table>
 		</div> <!-- calculator csection2 close-->
+		<div class="csection3"> <!-- calculator csection3 open-->
+			<h3 class="h3condition">OUTPUT:</h3>
+			<ul class="ulcsection3">
+				<li class="licsection3">1.Age:<span>22</span></li>
+				<li class="licsection3">2.Amount Per Day:<span>2</span></li>
+				<li class="licsection3">3.You will need <span>38709 </span>to last you until the ripe old age of <span>22<span></li>
+			</ul>
+			<ul class="ulcsection3">
+				<li class="licsection3">1.Age:<span>15</span></li>
+				<li class="licsection3">2.Amount Per Day:<span>2</span></li>
+				<li class="licsection3">3.You will need <span>43819 </span>to last you until the ripe old age of <span>15</span></li>
+			</ul>
+			<ul class="ulcsection3">
+				<li class="licsection3">1.Age:<span>19</span></li>
+				<li class="licsection3">2.Amount Per Day:<span>3</span></li>
+				<li class="licsection3">3.You will need <span>61339 </span>to last you until the ripe old age of <span>19</span></li>
+			</ul>
+		</div><!-- calculator csection3 close-->
 	</div><!-- calculor  section close-->
 	<div class="temperature" id="temperature"><!-- temperature  section open-->
 		<h4 class="ch4t">THE TEMPERATURE CONVERT</h4><!-- temperature  heading-->
@@ -154,22 +200,20 @@
 				<tr>
 					<td><label> Fahrenheit value</label></td>
 					<td><input type="text" name="fahre" id="fahre" class="fahre"></td>
-					<td><input type="text" id="fouput"></td>
+					<td><p id="fouput"></p></td>
 					<td><input type="submit" name="" class="submit" onclick="submitTemperaturef()"></td>
 				</tr>
 				<tr>	
 					<td><label>Celsius value</label></td>
 					<td><input type="text" id="cels"> </td>
-					<td><input type="text" id="coutput"></td>
+					<td><p id="coutput"></p></td>
 					<td><input type="submit" name="" class="submit" onclick="submitTemperaturec()"></td>
 				</tr>
 				
 			</table>
 		</div> <!-- temeparature csection2 close-->
 	</div><!-- temeparature  section close-->
-	<div class="fotter">
-		
-	</div>
+	
 </div>
  <script type="text/JavaScript" src="./js/script.js"></script>
 </body>

@@ -1,10 +1,18 @@
 function submitCalculateage() {
-    alert("Working")
+
     var birth = document.getElementById("birthDate").value;
     var curr = document.getElementById("currentdate").value;
+    if (birth == "") {
+        alert("BirthDate must be filled out");
+        return false;
+    }
+    if (curr == "") {
+        alert("Currentdate must be filled out");
+        return false;
+    }
     var calculate = calculateAge(birth, curr);
-    document.getElementById("age1").value = calculate;
-    document.getElementById("agec").value = calculate + 1;
+    document.getElementById("age1").innerHTML = calculate;
+    document.getElementById("agec").innerHTML = calculate - 1;
 }
 
 function calculateAge(birthYear, currYear) {
@@ -15,26 +23,42 @@ function calculateAge(birthYear, currYear) {
 
 function submitTemperaturef() {
     var fahre = document.getElementById("fahre").value;
+    if (fahre == "") {
+        alert("Fahrenheit value must be filled out");
+        return false;
+    }
     var far = (fahre - 32) * 5 / 9;
     console.log(far);
-    document.getElementById("fouput").value = far;
+    document.getElementById("fouput").innerHTML = far;
 }
 
 function submitTemperaturec() {
     var cels = document.getElementById("cels").value;
+    if (cels == "") {
+        alert("Celsius value must be filled out");
+        return false;
+    }
     var cel = (cels * 9 / 5) + 31
     console.log(cel);
-    document.getElementById("coutput").value = cel;
+    document.getElementById("coutput").innerHTML= cel;
 
 }
 
 function submitCalculator() {
-    alert("Working")
     var age = document.getElementById("age").value;
     var amount = document.getElementById("amount").value;
+     if (age == "") {
+        alert("Age must be filled out");
+        return false;
+    }
+    if (amount == "") {
+        alert("Amount Per Day must be filled out");
+        return false;
+    }
 
     var calculatedAge = calculateSupply(age, amount);
-    document.getElementById("output").value = calculatedAge;
+    document.getElementById("output").innerHTML = calculatedAge;
+    document.getElementById("output1").innerHTML = age;
 }
 
 function calculateSupply(age, amount) {
@@ -58,12 +82,16 @@ function calculateSupply(age, amount) {
 var pi = 3.147;
 
 function submitGemotric() {
-    alert("Working")
+
     var radius = document.getElementById("radius").value;
+    if (radius == "") {
+        alert("Radius of circle must be filled out");
+        return false;
+    }
     var cir = calcCircumfrence(radius);
     var area = calcArea(radius);
-    document.getElementById("circumfrence").value = cir;
-    document.getElementById("area").value = area;
+    document.getElementById("circumfrence").innerHTML = cir;
+    document.getElementById("area").innerHTML= area;
 }
 
 function calcCircumfrence(radius) {
