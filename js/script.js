@@ -3,16 +3,16 @@ function submitCalculateage() { //submitCalculateage function open
     var birth = document.getElementById("birthDate").value; //birth year input value
     var curr = document.getElementById("currentdate").value; //current year input value
 
-    alert(year);
 
-    if (birth == "") { //birth year form validation
-        alert("BirthDate must be filled out");
+      if (!/^[0-9]+$/.test(birth)) { //birth year form validation
+        alert("BirthDate must be filled out with  number");
         return false;
     }
-    if (curr == "") { //current year form validation
-        alert("Currentdate must be filled out");
+    if (!/^[0-9]+$/.test(curr)) { //current year form validation
+        alert("Currentdate must be filled out with  number");
         return false;
     }
+
     var calculate = calculateAge(birth, curr); //calculateage function call
     document.getElementById("age1").innerHTML = calculate; //output
     document.getElementById("agec").innerHTML = calculate - 1;
@@ -47,8 +47,8 @@ function calculateAge(birthYear, currYear) { //calculateage function open
 
 function submitTemperaturef() { //submitTemperaturef function open
     var fahre = document.getElementById("fahre").value; //input value for fahrenheit
-    if (fahre == "") { //form validation of fahrenheit
-        alert("Fahrenheit value must be filled out");
+    if (!/^[0-9]+$/.test(fahre)) { //form validation of fahrenheit
+        alert("Fahrenheit value must be filled out with  number");
         return false;
     }
     var far = (fahre - 32) * 5 / 9; //formula for calculate fahrenheit to celsius
@@ -57,8 +57,8 @@ function submitTemperaturef() { //submitTemperaturef function open
 
 function submitTemperaturec() { //submitTemperaturec function open
     var cels = document.getElementById("cels").value; //input value for celsius
-    if (cels == "") { //form validation of celsius
-        alert("Celsius value must be filled out");
+    if (!/^[0-9]+$/.test(cels)) { //form validation of celsius
+        alert("Celsius value must be filled out with  number");
         return false;
     }
     var cel = (cels * 9 / 5) + 31 //formula for calculate celsius to fahrenheit
@@ -71,12 +71,12 @@ var lifeExpectedyear11 = 75;
 function submitCalculator() { //submitCalculator function open
     var age = document.getElementById("age").value; //input value for age
     var amount = document.getElementById("amount").value; //input value for amount
-    if (age == "") { //form validation of age
+    if (!/^[0-9]+$/.test(age)) { //form validation of age
         alert("Age must be filled out");
         return false;
     }
-    if (amount == "") { //form validation of amount
-        alert("Amount Per Day must be filled out");
+    if (!/^[0-9]+$/.test(amount)) { //form validation of amount
+        alert("Amount Per Day must be filled out with  number");
         return false;
     }
 
@@ -119,8 +119,8 @@ var pi = 3.147; // global pi variable
 function submitGemotric() { //submitGemotric function open
 
     var radius = document.getElementById("radius").value; //input value for radius
-    if (radius == "") { //form validation of radius
-        alert("Radius of circle must be filled out");
+    if (!/^[0-9]+$/.test(radius)) { //form validation of radius
+        alert("Radius of circle must be filled out with  number");
         return false;
     }
     var cir = calcCircumfrence(radius); //calling calcCircumfrence function with parameter radius
