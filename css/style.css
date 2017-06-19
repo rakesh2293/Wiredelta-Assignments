@@ -280,3 +280,19 @@
         outline: none;
         width: 100px;
     }
+    
+    #fahre {
+        border: none;
+        border-bottom: thin dashed blue;
+        padding-bottom: 0;
+        outline: none;
+        width: 100px;
+    }
+    
+    #cels {
+        border: none;
+        border-bottom: thin dashed blue;
+        padding-bottom: 0;
+        outline: none;
+        width: 100px;
+    }
