@@ -2,6 +2,9 @@ function submitCalculateage() { //submitCalculateage function open
 
     var birth = document.getElementById("birthDate").value;//birth year input value
     var curr = document.getElementById("currentdate").value;//current year input value
+   
+    alert(year);
+
     if (birth == "") {                          //birth year form validation
         alert("BirthDate must be filled out");
         return false;
@@ -14,7 +17,12 @@ function submitCalculateage() { //submitCalculateage function open
     document.getElementById("age1").innerHTML = calculate;  //output
     document.getElementById("agec").innerHTML = calculate - 1;
 
+
+
 } //submitCalculateage function close
+var currentTime = new Date();
+var year = currentTime.getFullYear();
+var result5=calculateAge(1993, currentTime.getFullYear());
 
 var result1 = calculateAge(1990, 2017); //calling function 3 times
 var result2 = calculateAge(1995, 2016);
@@ -27,6 +35,10 @@ document.getElementById("result21").innerHTML = result2;
 document.getElementById("result22").innerHTML = result2 - 1;
 document.getElementById("result31").innerHTML = result3;
 document.getElementById("result32").innerHTML = result3 - 1;
+document.getElementById("cresult").innerHTML = result5;
+document.getElementById("cresult1").innerHTML = result5 - 1;
+
+
 
 function calculateAge(birthYear, currYear) { //calculateage function open
     var calculate = currYear - birthYear;
@@ -76,11 +88,11 @@ var resultc3 = calculateSupply(19, 3);
 
 
 document.getElementById("resulta").innerHTML = resultc1;//out put
-document.getElementById("resulta1").innerHTML = 23;
+document.getElementById("resulta1").innerHTML = 75;
 document.getElementById("resultb").innerHTML = resultc2;
-document.getElementById("resultb1").innerHTML = 22;
+document.getElementById("resultb1").innerHTML = 75;
 document.getElementById("resultc").innerHTML = resultc3;
-document.getElementById("resultc1").innerHTML = 19;
+document.getElementById("resultc1").innerHTML = 75;
 
 function calculateSupply(age, amount) {//calculateSupply function call
     var n = new Date().getFullYear();
